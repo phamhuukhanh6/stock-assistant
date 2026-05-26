@@ -1,0 +1,16 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "stock-assistant-api"
+main = "src/index.js"
+compatibility_date = "2026-05-26"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "stock-assistant-db"
+database_id = "PASTE_YOUR_D1_DATABASE_ID_HERE"
+
+[vars]
+# Add non-sensitive vars here
+# GOOGLE_API_KEY, VNSTOCK_API_KEY, JWT_SECRET should be set via `wrangler secret put`
+
+[observability]
+enabled = true
