@@ -1,4 +1,4 @@
-# Stock Assistant (Cloudflare Native) 🚀
+# VN30Stock Analysist Chatbot (Cloudflare Native) 🚀
 
 Chatbot phân tích chứng khoán Việt Nam chuyên nghiệp cho nhà đầu tư F0, chạy hoàn toàn trên hạ tầng Cloudflare.
 
@@ -37,4 +37,4 @@ npx wrangler dev
 ```
 
 ---
-*Phát triển bởi Stock Assistant Team - 2026*
+*Phát triển bởi VN30Stock Analysist Team - 2026*

@@ -296,7 +296,7 @@ export default function App() {
           <nav className="h-20 px-8 flex items-center justify-between border-b border-gray-100 bg-white/80 backdrop-blur-md sticky top-0 z-50">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 bg-gradient-to-br from-[#1e1b4b] to-[#4338ca] rounded-xl flex items-center justify-center shadow-xl shadow-indigo-200"><TrendingUp size={24} className="text-white" /></div>
-              <span className="text-xl font-bold tracking-tight text-[#1e1b4b]">STOCK<span className="text-amber-500">ASSISTANT</span></span>
+              <span className="text-xl font-bold tracking-tight text-[#1e1b4b]">VN30STOCK<span className="text-amber-500">ANALYSIST</span></span>
             </div>
             <div className="flex items-center gap-4">
               <button onClick={() => setAuthView('login')} className="px-5 py-2.5 font-semibold text-sm hover:text-indigo-600 transition-colors text-gray-500 uppercase tracking-widest">Đăng nhập</button>
@@ -306,12 +306,12 @@ export default function App() {
           <main className="flex-1 max-w-6xl mx-auto w-full px-8 py-20 flex flex-col items-center text-center relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-50 border border-indigo-100 rounded-full text-indigo-600 text-[10px] font-black uppercase tracking-widest mb-8"><ShieldCheck size={14} /> Professional Grade Financial Intelligence</div>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight text-[#1e1b4b]">Đầu tư thông minh <br /><span className="text-[#10b981]">Dẫn đầu thị trường</span></h1>
-            <p className="text-lg md:text-xl text-gray-500 max-w-2xl mb-12 leading-relaxed">Stock Assistant kết hợp sức mạnh của AI tiên tiến nhất và dữ liệu thị trường thời gian thực để giúp bạn đưa ra các quyết định đầu tư đúng đắn.</p>
+            <p className="text-lg md:text-xl text-gray-500 max-w-2xl mb-12 leading-relaxed">VN30Stock Analysist Chatbot kết hợp sức mạnh của AI tiên tiến nhất và dữ liệu thị trường thời gian thực để giúp bạn đưa ra các quyết định đầu tư đúng đắn.</p>
             <div className="flex flex-col sm:flex-row gap-4 mb-20">
               <button onClick={handleGuestMode} className="px-10 py-5 bg-[#1e1b4b] text-white rounded-2xl font-bold text-lg shadow-xl shadow-indigo-300 hover:scale-105 transition-all flex items-center gap-3">Bắt đầu ngay <Plus size={20} /></button>
             </div>
           </main>
-          <footer className="py-10 border-t border-gray-100 text-center text-gray-400 text-sm uppercase tracking-[0.2em]">© 2026 STOCK ASSISTANT</footer>
+          <footer className="py-10 border-t border-gray-100 text-center text-gray-400 text-sm uppercase tracking-[0.2em]">© 2026 VN30STOCK ANALYSIST CHATBOT</footer>
         </div>
       );
     }
@@ -322,7 +322,7 @@ export default function App() {
         </div>
         <button onClick={() => setAuthView('landing')} className="absolute top-8 left-8 flex items-center gap-2 text-gray-400 font-black uppercase tracking-widest text-xs hover:text-[#1e1b4b] transition-all z-10"><X size={20} /> Quay lại</button>
         <div className="bg-white/90 backdrop-blur-xl p-8 rounded-[32px] shadow-2xl w-full max-w-md border border-white z-10">
-          <div className="flex flex-col items-center mb-8"><div className="w-14 h-14 bg-gradient-to-br from-[#1e1b4b] to-[#4338ca] rounded-2xl flex items-center justify-center mb-4 shadow-xl"><Bot size={32} className="text-white" /></div><h1 className="text-2xl font-bold text-[#1e1b4b]">STOCK<span className="text-amber-500">ASSISTANT</span></h1></div>
+          <div className="flex flex-col items-center mb-8"><div className="w-14 h-14 bg-gradient-to-br from-[#1e1b4b] to-[#4338ca] rounded-2xl flex items-center justify-center mb-4 shadow-xl"><Bot size={32} className="text-white" /></div><h1 className="text-2xl font-bold text-[#1e1b4b]">VN30STOCK<span className="text-amber-500">ANALYSIST</span></h1></div>
           <form onSubmit={handleAuth} className="space-y-4">
             {authView === 'register' && (<div><label className="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Full Name</label><input type="text" required className="w-full p-3 bg-gray-100/50 rounded-xl border border-transparent focus:bg-white focus:ring-2 focus:ring-indigo-100" value={authForm.full_name} onChange={e => setAuthForm({...authForm, full_name: e.target.value})} /></div>)}
             <div><label className="text-[10px] font-bold text-gray-400 uppercase mb-1 block">Account</label><input type="text" required className="w-full p-3 bg-gray-100/50 rounded-xl border border-transparent focus:bg-white focus:ring-2 focus:ring-indigo-100" value={authForm.username} onChange={e => setAuthForm({...authForm, username: e.target.value})} /></div>
@@ -342,7 +342,7 @@ export default function App() {
     <div className="flex h-screen bg-[#f8fafc] text-[#1e1b4b] font-sans overflow-hidden">
       <div className={`bg-[#1e1b4b] text-white flex flex-col transition-all duration-500 border-r border-white/5 ${isSidebarOpen ? 'w-[300px]' : 'w-0'}`} style={{ opacity: isSidebarOpen ? 1 : 0 }}>
         <div className="p-6 flex flex-col h-full min-w-[300px]">
-          <div className="flex items-center gap-2 mb-8 px-2"><TrendingUp size={20} className="text-amber-500" /><span className="font-black tracking-tighter text-lg uppercase">STOCK<span className="text-amber-500">ASSISTANT</span></span></div>
+          <div className="flex items-center gap-2 mb-8 px-2"><TrendingUp size={20} className="text-amber-500" /><span className="font-black tracking-tighter text-lg uppercase">VN30STOCK<span className="text-amber-500">ANALYSIST</span></span></div>
           <button onClick={() => handleNewChat(null)} className="flex items-center gap-3 w-full p-3 rounded-xl bg-white/5 hover:bg-white/20 transition-all mb-8 border border-white/5 shadow-xl"><Plus size={18} className="text-emerald-500" /> <span className="font-bold text-xs uppercase tracking-widest">Đoạn chat mới</span></button>
           <div className="flex-1 overflow-y-auto space-y-8">
             <div>
@@ -421,7 +421,7 @@ export default function App() {
       <div className="flex-1 flex flex-col relative min-w-0 bg-[#f8fafc]">
         <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none grayscale"><img src="https://images.unsplash.com/photo-1611974717482-98252c00d64d?auto=format&fit=crop&q=80&w=2000" className="w-full h-full object-cover" /></div>
         <header className="h-16 border-b border-gray-100 flex items-center px-6 justify-between bg-white/70 backdrop-blur-xl sticky top-0 z-20">
-          <div className="flex items-center gap-4"><button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2.5 hover:bg-gray-100 rounded-xl text-[#1e1b4b] transition-all"><SidebarIcon size={20} /></button><span className="font-black text-xl tracking-tighter text-[#1e1b4b] uppercase">STOCK<span className="text-amber-500">ASSISTANT</span></span></div>
+          <div className="flex items-center gap-4"><button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2.5 hover:bg-gray-100 rounded-xl text-[#1e1b4b] transition-all"><SidebarIcon size={20} /></button><span className="font-black text-xl tracking-tighter text-[#1e1b4b] uppercase">VN30STOCK<span className="text-amber-500">ANALYSIST</span></span></div>
           <div className="flex items-center gap-2 text-xs font-black text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg border border-emerald-100 uppercase tracking-tighter"><div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Live Market Data</div>
         </header>
         <div ref={scrollRef} className="flex-1 overflow-y-auto px-6 py-10 flex flex-col items-center relative z-10 scroll-smooth">

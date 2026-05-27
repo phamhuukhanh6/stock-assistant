@@ -19,7 +19,7 @@ app.use('*', cors({
 const getSecretKey = (secret) => new TextEncoder().encode(secret || "super-secret-default-key-12345");
 
 // Root route for testing
-app.get('/', (c) => c.text('Stock Assistant API is running!'));
+app.get('/', (c) => c.text('VN30Stock Analysist API is running!'));
 app.get('/health', (c) => c.json({ status: 'ok' }));
 
 async function authMiddleware(c, next) {

@@ -1,6 +1,6 @@
-# Hướng dẫn Triển khai dự án lên Cloudflare
+# Hướng dẫn Triển khai VN30Stock Analysist Chatbot
 
-Tài liệu này hướng dẫn bạn cách đưa toàn bộ ứng dụng Stock Assistant (bao gồm Frontend, Backend và Database) lên hạ tầng Cloudflare.
+Tài liệu này hướng dẫn bạn cách đưa toàn bộ ứng dụng VN30Stock Analysist Chatbot (bao gồm Frontend, Backend và Database) lên hạ tầng Cloudflare.
 
 ## 1. Yêu cầu chuẩn bị
 - Đã cài đặt [Node.js](https://nodejs.org/) (phiên bản 18 trở lên).
@@ -18,13 +18,13 @@ Tài liệu này hướng dẫn bạn cách đưa toàn bộ ứng dụng Stock 
 
 2. **Tạo Database D1:**
    ```bash
-   npx wrangler d1 create stock-assistant-db
+   npx wrangler d1 create vn30stock-analysist-db
    ```
    *Lưu ý: Sau khi tạo, hãy copy `database_id` và dán vào file `worker-backend/wrangler.toml` tại dòng `database_id = "..."`.*
 
 3. **Khởi tạo cấu trúc bảng (Schema):**
    ```bash
-   npx wrangler d1 execute stock-assistant-db --file=database/schema.sql
+   npx wrangler d1 execute vn30stock-analysist-db --file=database/schema.sql
    ```
 
 ---
@@ -49,7 +49,7 @@ Tài liệu này hướng dẫn bạn cách đưa toàn bộ ứng dụng Stock 
    ```bash
    npx wrangler deploy
    ```
-   *Sau khi lệnh hoàn tất, bạn sẽ nhận được một URL của Worker (ví dụ: `https://stock-assistant-api.yourname.workers.dev`). Hãy copy URL này.*
+   *Sau khi lệnh hoàn tất, bạn sẽ nhận được một URL của Worker (ví dụ: `https://vn30stock-analysist-api.yourname.workers.dev`). Hãy copy URL này.*
 
 ---
 
@@ -64,7 +64,7 @@ Tài liệu này hướng dẫn bạn cách đưa toàn bộ ứng dụng Stock 
 2. **Build dự án với URL API mới:**
    Sử dụng URL Worker bạn vừa nhận được ở bước trên (thêm `/api` vào cuối):
    ```bash
-   VITE_API_URL=https://stock-assistant-api.yourname.workers.dev/api npm run build
+   VITE_API_URL=https://vn30stock-analysist-api.yourname.workers.dev/api npm run build
    ```
 
 3. **Triển khai lên Cloudflare Pages:**

@@ -1,11 +1,11 @@
 #:schema node_modules/wrangler/config-schema.json
-name = "stock-assistant-api"
+name = "vn30stock-analysist-api"
 main = "src/index.js"
 compatibility_date = "2026-05-26"
 
 [[d1_databases]]
 binding = "DB"
-database_name = "stock-assistant-db"
+database_name = "vn30stock-analysist-db"
 database_id = "6a80c3bd-ac09-42b9-8a7f-f10b369ac664"
 
 [vars]
