@@ -1,30 +1,40 @@
-# Claude Chatbot with Templates
+# Stock Assistant (Cloudflare Native) 🚀
 
-This is a standalone chatbot application built using React, Tailwind CSS, and Express, integrated with the agent templates from the `claude-code-templates` repository.
+Chatbot phân tích chứng khoán Việt Nam chuyên nghiệp cho nhà đầu tư F0, chạy hoàn toàn trên hạ tầng Cloudflare.
 
-## Features
-- **Claude-like UI**: Clean, minimalist interface mimicking Claude.ai.
-- **Agent Library**: Browse and select from over 100+ specialized agent templates.
-- **Real-time Streaming**: Chat responses stream in real-time.
-- **Markdown Support**: Rich text rendering for code blocks, lists, etc.
+## 🏗️ Kiến trúc Hệ thống
+- **Frontend:** React + Vite (Triển khai trên Cloudflare Pages)
+- **Backend:** Hono Framework (Triển khai trên Cloudflare Workers)
+- **Database:** Cloudflare D1 (Serverless SQL)
+- **AI:** Google Gemini 3.5 Flash
 
-## Setup
+## 📂 Cấu trúc Thư mục
+- `/frontend`: Mã nguồn giao diện người dùng.
+- `/worker-backend`: Logic xử lý API và AI (Đầu não của hệ thống).
+- `/database`: Chứa schema để quản lý cấu trúc dữ liệu trên D1.
+- `/knowledge`: Thư viện kiến thức bổ trợ cho AI.
 
-### 1. Backend
-```bash
-cd backend
-cp .env.example .env
-# Edit .env and add your ANTHROPIC_API_KEY
-npm install
-node server.js
-```
+## 🛠️ Quản lý & Vận hành
 
-### 2. Frontend
+### 1. Thay đổi Giao diện (Frontend)
 ```bash
 cd frontend
-npm install
-npm run dev
+# Sửa code xong thì deploy
+npx wrangler pages deploy dist --project-name=stock-assistant-web
 ```
 
-## How it works
-The backend scans the `claude-code-templates` directory for markdown files in `agents` folders. It parses the frontmatter and uses the remaining content as the system prompt for the Claude API.
+### 2. Thay đổi Logic AI (Backend)
+```bash
+cd worker-backend
+# Sửa code xong thì deploy
+npx wrangler deploy
+```
+
+### 3. Thử nghiệm Local (An toàn)
+Trong thư mục `worker-backend`, gõ:
+```bash
+npx wrangler dev
+```
+
+---
+*Phát triển bởi Stock Assistant Team - 2026*

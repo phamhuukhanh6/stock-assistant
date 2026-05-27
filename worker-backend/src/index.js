@@ -1,16 +1,26 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { logger } from 'hono/logger';
 import { jwtVerify, SignJWT } from 'jose';
 import bcrypt from 'bcryptjs';
-import { agents } from './agents';
-import { buildPrompt, truncateMessages } from './utils';
+import { agents } from './agents.js';
+import { buildPrompt, truncateMessages } from './utils.js';
 
 const app = new Hono();
 
 // Middleware
-app.use('*', cors());
+app.use('*', logger());
+app.use('*', cors({
+  origin: '*',
+  allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowHeaders: ['Content-Type', 'Authorization'],
+}));
 
 const getSecretKey = (secret) => new TextEncoder().encode(secret || "super-secret-default-key-12345");
+
+// Root route for testing
+app.get('/', (c) => c.text('Stock Assistant API is running!'));
+app.get('/health', (c) => c.json({ status: 'ok' }));
 
 async function authMiddleware(c, next) {
   const authHeader = c.req.header('Authorization');
