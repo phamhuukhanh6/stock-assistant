@@ -28,7 +28,7 @@ interface Conversation {
   agent_id: string;
 }
 
-const API_BASE = import.meta.env.VITE_API_URL || 'https://stock-assistant-api.phamhuukhanh6.workers.dev/api';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://vn30stock-analysist-api.phamhuukhanh6.workers.dev/api';
 
 export default function App() {
   const [messages, setMessages] = useState<Message[]>([]);
